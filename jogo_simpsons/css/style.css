@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+body button:hover {
+  cursor: pointer;
+}
+
+.game-board {
+  height: 100vh;
+  width: 100%;
+  /* height: 844px; */
+  border-bottom: 20px solid rgb(215 208 88);
+  background: linear-gradient(#87ceeb, #c0c5c7);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-iniciar {
+  left: 45%;
+  top: 50%;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #ffd521;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.btn-iniciar:hover {
+  transform: scale(1.1);
+}
+
+.btn-sobre {
+  left: 45%;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background-color: #ffd521;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.sobre {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 800;
+  max-width: 700px;
+  margin: 200px auto;
+}
+
+.sobre p,
+.sobre ul,
+.sobre h3 {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.instrucoes {
+  left: 40%;
+  top: 50%;
+  margin-bottom: 15px;
+  position: relative;
+  font-weight: 800;
+}
+
+.barril {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  bottom: -19px;
+  animation: barril-animation 1.5s infinite linear;
+}
+
+.homer {
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.rosquinha {
+  position: absolute;
+  width: 300px;
+  left: 1300px;
+}
+.nuvens {
+  z-index: 0;
+  position: absolute;
+  width: 550px;
+  animation: nuvens-animation 20s infinite linear;
+}
+
+@keyframes barril-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes nuvens-animation {
+  from {
+    right: -550px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
